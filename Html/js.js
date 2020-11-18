@@ -1,3 +1,3 @@
 'use strict'
 
-var name = "Refinería F12"
+let name = "Refinería F12";
