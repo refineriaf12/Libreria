@@ -1,9 +1,19 @@
-main{
-    width: 100px;
-    margin: 20% auto;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(img/fondo_xp.jpg);
+    
+    
 }
 fieldset{
 width: 200px;
+height: 90px;
+margin: 20% auto;
+}
+label{
+    padding-top: 5px;
 }
 label, input{
     margin: 5px;
