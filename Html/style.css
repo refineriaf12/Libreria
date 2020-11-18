@@ -1,0 +1,10 @@
+main{
+    width: 100px;
+    margin: 250px auto;
+}
+fieldset{
+width: 200px;
+}
+label, input{
+    margin: 5px;
+}
