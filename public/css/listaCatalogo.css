@@ -1,0 +1,28 @@
+.container{
+
+    width: 50%;
+    display: flex;
+}
+
+#listaDiscos{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+#listaDiscos img{
+    width:100px;
+}
+
+
+#listaLibros{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+#listaLibros img{
+    width:100px;
+}
+
+

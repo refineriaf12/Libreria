@@ -1,0 +1,18 @@
+{
+
+    "edit":{
+
+        "url":"/edit"
+    },
+    "login":{
+
+        "url":"/"
+
+    },
+    "catalog":{
+
+        "url":"/catalog"
+
+    }
+
+}
