@@ -1,9 +1,13 @@
-<button></button>
+<a href="/">Atras</a>
 <form action="#" method="post">
- 
 
     
     <fieldset class="formCol">
+
+    <label for="libro">Libro</label>
+    <input type="radio" name="libro">
+    <label for="disco">Disco</label>
+    <input type="radio" name= "disco">
     <label for="titulo">Titulo</label>
     <input type="text" name="titulo" id="titulo">
     <label for="autor">Autor</label>
@@ -12,14 +16,13 @@
     <input type="text" name="genero" id="genero">
     <label for="editorial">Editorial</label>
     <input type="text" name="editorial" id="editorial">
-    <label for="libro">Libro</label>
-    <input type="radio" name="libro">
-    <label for="disco">Disco</label>
-    <input type="radio" name= "disco">
     <input type="submit">Guardar</input>
     </fieldset>
     <fieldset class="formCol">
-    <input type="file" name="" id="">
+
+    <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple >
+    <label for="file"><span>Escoja un archivo</span></label>
+
     <label for="precio">Precio</label>
     <input type="number" name= "precio">
     <label for="stock">Stock</label>
