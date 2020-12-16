@@ -17,7 +17,7 @@ app.engine('hbs',exphbs({
 
 app.set('view engine', 'hbs');
  
-app.get(paths.login.url, function (req, res) {
+app.get(paths.catalog.url, function (req, res) {
     
     res.render('catalogoTemplate',{layout:'catalogoLayout',listaDiscos:discos,listaLibros:libros});
 
@@ -26,6 +26,12 @@ app.get(paths.login.url, function (req, res) {
 app.get(paths.edit.url, function(req,res){
 
     res.render('edicionTemplate',{layout:'edicionLayout'});
+    
+});
+//cargar el login template
+app.get(paths.login.url, function(req,res){
+
+    res.render('loginTemplate',{layout:'loginLayout'});
     
 });
 
