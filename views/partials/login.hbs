@@ -1,13 +1,10 @@
 
 
-    <section>
-        <form action="" method="post">
+        <form class="formularioLogin" action="" method="post">
             {{#each usuarioImagen}}
-                {{>atoms/wellcome}}
+                {{>atoms/welcome}}
             {{/each}}
-                <input type="text" id= "usuario" name="usuario">
-                <label for= "usuario" >usuario</label>
-                <button id= "entrar">entrar</button>
-        </form>
-    </section>   
+                <input type="text" id= "usuario" name="usuario" placeholder="USUARIO">
+                <input type="submit" value="ENTRAR" id= "entrar" class= "btnLogin">
+        </form> 
 

@@ -2,3 +2,15 @@
 @import url("listaCatalogo.css");
 @import url("formulario.css");
 @import url("login.css");
+
+body{
+    background-image: url("");
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-content:center;
+    height:100vh;
+    
+}

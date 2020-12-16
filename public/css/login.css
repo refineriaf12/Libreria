@@ -1,0 +1,40 @@
+
+.formularioLogin{
+    grid-column: 4 / 6;
+    grid-row: 2;
+    padding:2rem 2rem 5rem 2rem;
+    background-color:#0075FF;
+    
+}
+
+.formularioLogin input{
+    width: 100%;
+    margin: 1rem 0;
+    height: 2rem;
+    text-align: center;
+    
+}
+.formularioLogin input::placeholder{
+    color: #c4c4c4;
+}
+
+
+.btnLogin{
+    background-color: #F96E58;
+    color: white;
+    border: none;
+    box-shadow: none;
+   
+
+
+}
+
+.formularioLogin figure{
+    display: flex;
+    justify-content: center;
+
+}
+.formularioLogin img{
+    width: 70%;
+    
+}
