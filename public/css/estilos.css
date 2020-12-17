@@ -12,5 +12,5 @@ section {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     align-content:center;
     height:100vh;
-    
+    grid-gap: 1rem;
 }
