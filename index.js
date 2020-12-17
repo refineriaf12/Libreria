@@ -32,22 +32,22 @@ app.set('view engine', 'hbs');
  
 app.get(paths.login.url, function (req, res) {
     
+    res.render('catalogoTemplate', {layout:'catalogoLayout',listaLibros:buscaLibros()} );
+
+});
+
+function buscaLibros(){
+
     Libro.find({}).exec(function(err, libros){
         if( err ){ console.log('Error: ', err); return; }
-        console.log("The INDEX");
-        
+        console.log(libros);
+        return libros;
+
         
     });
 
-    Disco.find({}).exec(function(err, discos){
-        if( err ){ console.log('Error: ', err); return; }
-        console.log("The INDEX");
-        
-        
-    });
 
-    res.render('catalogoTemplate', {layout:'catalogoLayout',listaLibros:libros,listaDiscos: discos} );
-});
+}
 
 app.get(paths.edit.url, function(req,res){
 

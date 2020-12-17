@@ -1,11 +1,11 @@
 let mongoose = require('mongoose');
-const { Schema } = mongoose;
-
+let Schema = mongoose.Schema;
 const libroSchema = new Schema({
-    titulo:  String, 
+    titulo: String, 
     autor: String,
-    stock:   Number,
+    stock: Number,
     precio: Number
 });
 
+libroSchema.set('toJSON', { getters: true, virtuals: false });
 module.exports = mongoose.model('Libro', libroSchema);
