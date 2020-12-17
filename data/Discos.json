@@ -30,4 +30,44 @@
     "autor":"Guns'n Roses",
     "stock": 40,
     "precio": 99.99
+},
+{
+    "img-url":"./img/appetite.jpg",
+    "img-alt":"caratula del disco Appetite for Destruction",
+    "titulo": "Appetite for Destruction",
+    "autor":"Guns'n Roses",
+    "stock": 40,
+    "precio": 99.99
+},
+{
+    "img-url":"./img/appetite.jpg",
+    "img-alt":"caratula del disco Appetite for Destruction",
+    "titulo": "Appetite for Destruction",
+    "autor":"Guns'n Roses",
+    "stock": 40,
+    "precio": 99.99
+},
+{
+    "img-url":"./img/appetite.jpg",
+    "img-alt":"caratula del disco Appetite for Destruction",
+    "titulo": "Appetite for Destruction",
+    "autor":"Guns'n Roses",
+    "stock": 40,
+    "precio": 99.99
+},
+{
+    "img-url":"./img/appetite.jpg",
+    "img-alt":"caratula del disco Appetite for Destruction",
+    "titulo": "Appetite for Destruction",
+    "autor":"Guns'n Roses",
+    "stock": 40,
+    "precio": 99.99
+},
+{
+    "img-url":"./img/appetite.jpg",
+    "img-alt":"caratula del disco Appetite for Destruction",
+    "titulo": "Appetite for Destruction",
+    "autor":"Guns'n Roses",
+    "stock": 40,
+    "precio": 99.99
 }]
