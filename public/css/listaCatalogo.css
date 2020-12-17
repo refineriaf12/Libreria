@@ -1,28 +1,40 @@
-.container{
+#listaLibros{
+    grid-column: 2/5;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-gap:1rem;
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 1rem 0;
+}
 
-    width: 50%;
-    display: flex;
+#listaLibros img{
+    width:50%;
 }
 
 #listaDiscos{
-
+    grid-column: 5/8;
+    grid-row: 2;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
+    grid-template-columns:repeat(3, 1fr);
+    grid-gap:1rem;
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 1rem 0;
 }
 #listaDiscos img{
-    width:100px;
+    width:77%;
 }
 
-
-#listaLibros{
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
+.listaLibrosTitulo{
+    grid-column: 2/5;
+    text-align: center;
 }
-#listaLibros img{
-    width:100px;
+.listaDiscosTitulo{
+    grid-column: 5/8;
+    text-align: center;
 }
 
-
+#listaDiscos li, #listaLibros li{
+    justify-content: center;
+    text-align: center;
+}
