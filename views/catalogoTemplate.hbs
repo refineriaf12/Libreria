@@ -1,7 +1,10 @@
 {{>navBar}}
 <main>
     <section>
-        {{>listaLibros}}
-        {{>listaDiscos}}
+        {{#if decision}}
+            {{>listaLibros}}
+        {{else}}
+            {{>listaDiscos}}
+        {{/if}}
     </section>
 </main>

@@ -9,9 +9,19 @@
         "url":"/"
 
     },
-    "catalog":{
+    "bookCatalog":{
 
-        "url":"/catalog"
+        "url":"/bookCatalog"
+
+    },
+    "discCatalog":{
+
+        "url":"/discCatalog"
+
+    },
+    "home":{
+
+        "url":"/home"
 
     }
 

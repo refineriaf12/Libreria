@@ -9,7 +9,7 @@ libroController.list = function(req,res){
 
     Libro.find({}).lean().exec(function(err, libros){
         if( err ){ console.log('Error: ', err); return; }
-        res.render('catalogoTemplate',{layout:'catalogoLayout',listaLibros:libros});
+        res.render('catalogoTemplate',{layout:'catalogoLayout',listaLibros:libros,decision:true});
 
         
     });
