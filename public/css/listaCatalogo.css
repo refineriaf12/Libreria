@@ -1,5 +1,5 @@
 #listaLibros{
-    grid-column: 2/5;
+    grid-column: 3/7;
     grid-row: 2;
     display: grid;
     grid-template-columns:repeat(3, 1fr);
@@ -13,7 +13,7 @@
 }
 
 #listaDiscos{
-    grid-column: 5/8;
+    grid-column: 3/7;
     grid-row: 2;
     display: grid;
     grid-template-columns:repeat(3, 1fr);
@@ -26,11 +26,11 @@
 }
 
 .listaLibrosTitulo{
-    grid-column: 2/5;
+    grid-column: 3/7;
     text-align: center;
 }
 .listaDiscosTitulo{
-    grid-column: 5/8;
+    grid-column: 3/7;
     text-align: center;
 }
 

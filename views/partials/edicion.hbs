@@ -1,35 +1,38 @@
 <article>
+
     <a href="/">&#8592;Volver</a>
 
     <form action="#" method="post">
 
-        
-        <fieldset class="formCol colIzquierda" >
+        <fieldset class="formCol colIzquierda">
 
-        <label for="libro">Libro</label>
-        <input type="radio" name="libro">
-        <label for="disco">Disco</label>
-        <input type="radio" name= "disco">
-        <label for="titulo">Titulo</label>
-        <input type="text" name="titulo" id="titulo">
-        <label for="autor">Autor</label>
-        <input type="text" name="autor" id="autor">
-        <label for="genero">Genero</label>
-        <input type="text" name="genero" id="genero">
-        <label for="editorial">Editorial</label>
-        <input type="text" name="editorial" id="editorial">
-        <input type="submit">Guardar</input>
+            <label for="tipo">Libro</label>
+            <input type="radio" name="tipo" value="Libro" checked>
+            <label for="tipo">Disco</label>
+            <input type="radio" name="tipo" value="Disco">
+            <label for="titulo">Titulo</label>
+            <input type="text" name="titulo" id="titulo">
+            <label for="autor">Autor</label>
+            <input type="text" name="autor" id="autor">
+            <label for="genero">Genero</label>
+            <input type="text" name="genero" id="genero">
+            <label for="editorial">Editorial</label>
+            <input type="text" name="editorial" id="editorial">
+            <input type="submit">Guardar</input>
+
         </fieldset>
+
         <fieldset class="formCol colDerecha">
 
-        <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple >
-        <label for="file" class= "mostrarImagen" ><span >+</span></label>
+            <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple >
+            <label for="file" class= "mostrarImagen" ><span >+</span></label>
+            <label for="precio">Precio</label>
+            <input type="number" name= "precio">
+            <label for="stock">Stock</label>
+            <input type="number" name= "stock">
 
-        <label for="precio">Precio</label>
-        <input type="number" name= "precio">
-        <label for="stock">Stock</label>
-        <input type="number" name= "stock">
         </fieldset>
 
     </form>
+
 </article>
