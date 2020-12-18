@@ -4,6 +4,9 @@ const app = express();
 const mongoose = require('mongoose');
 const Libro = require('./models/Libro');
 const Disco = require('./models/Disco');
+const libroController = require('./controllers/libroController.js');
+const discoController = require('./controllers/discoController.js');
+
 
 
 
@@ -15,8 +18,6 @@ db.once('open', function() {
 });
 
 
-const discos = require('./data/Discos.json');
-const libros = require('./data/Libros.json');
 const paths = require('./data/Paths.json');
 
 
@@ -29,32 +30,21 @@ app.engine('hbs',exphbs({
 }));
 
 app.set('view engine', 'hbs');
- 
-app.get(paths.login.url, function (req, res) {
-    
-    res.render('catalogoTemplate', {layout:'catalogoLayout',listaLibros:buscaLibros()} );
 
-});
-
-function buscaLibros(){
-
-    Libro.find({}).exec(function(err, libros){
-        if( err ){ console.log('Error: ', err); return; }
-        console.log(libros);
-        return libros;
-
-        
-    });
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 
-}
+app.get(paths.login.url,libroController.list);
+app.get(paths.login.url,discoController.list);
+
+
 
 app.get(paths.edit.url, function(req,res){
 
     res.render('edicionTemplate',{layout:'edicionLayout'});
     
 });
-
 
 app.use(express.static('public'));
 app.listen(3000);

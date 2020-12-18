@@ -7,5 +7,9 @@ const discoSchema = new Schema({
     precio: Number,
     
 });
-discoSchema.set('toJSON', { getters: true, virtuals: false });
+discoSchema.methods.toJSON = function() {   
+    let disco = this;
+    let discoObject = disco.toObject();
+    return discoObject;
+}
 module.exports = mongoose.model('Disco', discoSchema);
