@@ -1,12 +1,73 @@
-form{
-    display:flex;
+article{
+    grid-column: 2/7;
+    grid-row: 2;
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 0.3rem;  
+
 }
-button{
-    display:block;
+article form{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-gap:1rem;
+    padding: 1rem ;
+   
 }
-.formCol{
-    width:50%;
+
+.colIzquierda{
+    grid-column: 1/2;
+
 }
+.colIzquierda input{
+    width: 100%;
+
+}
+
+.colDerecha{
+    grid-column: 2/3;
+    justify-self: end;
+
+}
+
+
 .formCol input, .formCol label{
     display:block;
+}
+
+.mostrarImagen{
+    width: 10rem;
+    height: 10rem;
+   position: relative;   
+}
+
+.mostrarImagen span{
+    width: 100%;
+    color: #b4b4b4;
+    text-align: center;
+    padding: 3rem 3.5rem;
+    font-size: 4rem;
+    background-color: #646363;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+.mostrarImagen img{
+    width: 100%;
+    
+}
+.inputfile{
+    width: 0,1px;
+    height: 0,1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+article a{
+    text-decoration: none;
+    background-color: #C4C4C4;
+    padding: 0.6rem 0,2rem;
+    color: black;
+
 }

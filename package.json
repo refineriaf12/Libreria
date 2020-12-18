@@ -16,5 +16,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/refineriaf12/Libreria.git"
+  },
+  "bugs": {
+    "url": "https://github.com/refineriaf12/Libreria/issues"
+  },
+  "homepage": "https://github.com/refineriaf12/Libreria#readme"
 }

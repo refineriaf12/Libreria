@@ -1,32 +1,35 @@
-<a href="/">Atras</a>
-<form action="#" method="post">
+<article>
+    <a href="/">&#8592;Volver</a>
 
-    
-    <fieldset class="formCol">
+    <form action="#" method="post">
 
-    <label for="libro">Libro</label>
-    <input type="radio" name="libro">
-    <label for="disco">Disco</label>
-    <input type="radio" name= "disco">
-    <label for="titulo">Titulo</label>
-    <input type="text" name="titulo" id="titulo">
-    <label for="autor">Autor</label>
-    <input type="text" name="autor" id="autor">
-    <label for="genero">Genero</label>
-    <input type="text" name="genero" id="genero">
-    <label for="editorial">Editorial</label>
-    <input type="text" name="editorial" id="editorial">
-    <input type="submit">Guardar</input>
-    </fieldset>
-    <fieldset class="formCol">
+        
+        <fieldset class="formCol colIzquierda" >
 
-    <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple >
-    <label for="file"><span>Escoja un archivo</span></label>
+        <label for="libro">Libro</label>
+        <input type="radio" name="libro">
+        <label for="disco">Disco</label>
+        <input type="radio" name= "disco">
+        <label for="titulo">Titulo</label>
+        <input type="text" name="titulo" id="titulo">
+        <label for="autor">Autor</label>
+        <input type="text" name="autor" id="autor">
+        <label for="genero">Genero</label>
+        <input type="text" name="genero" id="genero">
+        <label for="editorial">Editorial</label>
+        <input type="text" name="editorial" id="editorial">
+        <input type="submit">Guardar</input>
+        </fieldset>
+        <fieldset class="formCol colDerecha">
 
-    <label for="precio">Precio</label>
-    <input type="number" name= "precio">
-    <label for="stock">Stock</label>
-    <input type="number" name= "stock">
-    </fieldset>
+        <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple >
+        <label for="file" class= "mostrarImagen" ><span >+</span></label>
 
-</form>
+        <label for="precio">Precio</label>
+        <input type="number" name= "precio">
+        <label for="stock">Stock</label>
+        <input type="number" name= "stock">
+        </fieldset>
+
+    </form>
+</article>

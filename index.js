@@ -19,6 +19,7 @@ db.once('open', function() {
 
 
 const paths = require('./data/Paths.json');
+const welcome = require('./data/bienvenidos.json');
 
 
 app.engine('hbs',exphbs({
@@ -30,6 +31,10 @@ app.engine('hbs',exphbs({
 }));
 
 app.set('view engine', 'hbs');
+ 
+app.get(paths.catalog.url, function (req, res) {
+    
+    res.render('catalogoTemplate',{layout:'catalogoLayout',listaDiscos:discos,listaLibros:libros});
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -45,6 +50,13 @@ app.get(paths.edit.url, function(req,res){
     res.render('edicionTemplate',{layout:'edicionLayout'});
     
 });
+//cargar el login template
+app.get(paths.login.url, function(req,res){
+
+    res.render('loginTemplate',{layout:'loginLayout',usuarioImagen:welcome});
+    
+});
+
 
 app.use(express.static('public'));
 app.listen(3000);
