@@ -23,6 +23,11 @@
 
         "url":"/home"
 
+    },
+    "loginform":{
+
+        "url":"/formularioLogin"
+
     }
 
 }

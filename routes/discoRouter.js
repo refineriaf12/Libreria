@@ -4,5 +4,6 @@ const paths = require('../data/Paths.json');
 const disco = require('../controllers/discoController.js');
 
 router.get(paths.discCatalog.url,disco.list);
+router.get('/discoShow/:id',disco.show);
 
 module.exports = router;

@@ -11,11 +11,23 @@ router.get(paths.login.url ,function (req,res){
 
 });
 
-router.post('/formularioLogin',function(req,res){
+router.post(paths.loginform.url,function(req,res){
 
     res.redirect('/home');
   
   
-})
+});
+
+router.get(paths.home.url,function(req,res){
+
+    res.render('homeTemplate',{layout:'inicioLayout'});
+
+});
+
+router.get(paths.edit.url,function(req,res){
+
+    res.render('edicionTemplate',{layout:'edicionLayout'});
+  
+});
 
 module.exports = router;

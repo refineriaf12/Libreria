@@ -4,7 +4,9 @@ const libroSchema = new Schema({
     titulo: String, 
     autor: String,
     stock: Number,
-    precio: Number
+    precio: Number,
+    genero: String,
+    editorial: String
 });
 
 libroSchema.methods.toJSON = function() {   

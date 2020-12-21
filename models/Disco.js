@@ -5,6 +5,8 @@ const discoSchema = new Schema({
     autor: String,
     stock:   Number,
     precio: Number,
+    genero: String,
+    sello: String
     
 });
 discoSchema.methods.toJSON = function() {   
