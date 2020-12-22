@@ -1,10 +1,12 @@
 <article>
 
     <a href="/home">&#8592;Volver</a>
-    <button>Libro</button>
-    <button>Disco</button>
+    <div class="tab">
+        <button class="tablinks" onclick="openForm(event, 'LibroForm')" id="defaultOpen">Libro</button>
+        <button class="tablinks" onclick="openForm(event, 'DiscoForm')">Disco</button>
+    </div>
 
-    <form action="/createBook" method="POST" class="newForm formulario">
+    <form action="/createBook" method="POST" id="LibroForm" class="newForm formulario tabcontent">
 
         <fieldset class="formCol colIzquierda">
             
@@ -36,7 +38,7 @@
 
     </form>
 
-    <form action="/createDisc" method="POST" class="newForm formulario">
+    <form action="/createDisc" method="POST" id="DiscoForm" class="newForm formulario tabcontent">
 
         <fieldset class="formCol colIzquierda">
             
