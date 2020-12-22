@@ -28,4 +28,16 @@ libroController.show = function(req,res){
 
 };
 
+libroController.save = function(req, res){
+    let libro = new Libro( req.body );
+    
+    libro.save(function(err){
+        if( err ){ console.log('Error: ', err); return; }
+        
+        console.log("Libro guardado con exito");
+        res.redirect("/libroShow/"+libro._id);
+        
+    });
+};
+
 module.exports = libroController;

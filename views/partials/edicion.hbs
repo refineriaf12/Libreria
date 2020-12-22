@@ -1,30 +1,63 @@
 <article>
 
     <a href="/home">&#8592;Volver</a>
+    <button>Libro</button>
+    <button>Disco</button>
 
-    <form action="/createBook" method="get" class="newForm formulario">
+    <form action="/createBook" method="POST" class="newForm formulario">
 
         <fieldset class="formCol colIzquierda">
-            <label for="tipo">Libro</label>
-            <input type="radio" name="tipo" id="Libro" value="Libro" checked>
-            <input type="radio" name="tipo" id="Disco" value="Disco">
-            <label for="tipo">Disco</label>
+            
             <label for="titulo">Titulo</label>
             <input type="text" name="titulo" id="titulo" value="{{this.titulo}}">
             <label for="autor">Autor</label>
             <input type="text" name="autor" id="autor" value="{{this.autor}}">
             <label for="genero">Genero</label>
             <input type="text" name="genero" id="genero" value="{{this.genero}}">
-            <label for="editorial">Editorial</label>
-            <input type="text" name="editorial" id="editorial" value="{{this.editorial}}">
+            <label for="sello_editorial">Editorial/sello</label>
+            <input type="text" name="sello_editorial" id="sello_editorial" value="{{this.sello_editorial}}">
             
 
         </fieldset>
 
         <fieldset class="formCol colDerecha">
 
-            {{!-- <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple > --}}
-            {{!-- <label for="file" class= "mostrarImagen" ><span >+</span></label> --}}
+            <label for="urlImagen">Url de la portada</label>
+            <input type="text" id="urlImagen" name="urlImagen">
+            <label for="descripcion">Descripcion</label>
+            <input type="text" id="descripcion" name="descripcion">
+            <label for="precio">Precio</label>
+            <input type="number" name= "precio" value="{{this.precio}}">
+            <label for="stock">Stock</label>
+            <input type="number" name= "stock" value="{{this.stock}}">
+            <input type="submit" value="Guardar">
+
+        </fieldset>
+
+    </form>
+
+    <form action="/createDisc" method="POST" class="newForm formulario">
+
+        <fieldset class="formCol colIzquierda">
+            
+            <label for="titulo">Titulo</label>
+            <input type="text" name="titulo" id="titulo" value="{{this.titulo}}">
+            <label for="autor">Autor</label>
+            <input type="text" name="autor" id="autor" value="{{this.autor}}">
+            <label for="genero">Genero</label>
+            <input type="text" name="genero" id="genero" value="{{this.genero}}">
+            <label for="sello_editorial">Editorial/sello</label>
+            <input type="text" name="sello_editorial" id="sello_editorial" value="{{this.sello_editorial}}">
+            
+
+        </fieldset>
+
+        <fieldset class="formCol colDerecha">
+
+            <label for="urlImagen">Url de la portada</label>
+            <input type="text" id="urlImagen" name="urlImagen">
+            <label for="descripcion">Descripcion</label>
+            <input type="text" id="descripcion" name="descripcion">
             <label for="precio">Precio</label>
             <input type="number" name= "precio" value="{{this.precio}}">
             <label for="stock">Stock</label>
@@ -47,20 +80,22 @@
             <input type="text" name="autor" id="autor" value="{{this.autor}}">
             <label for="genero">Genero</label>
             <input type="text" name="genero" id="genero" value="{{this.genero}}">
-            <label for="editorial">Editorial</label>
-            <input type="text" name="editorial" id="editorial" value="{{this.editorial}}">
-            <input type="submit" value="Guardar">
+            <label for="sello_editorial">Editorial/sello</label>
+            <input type="text" name="sello_editorial" id="sello_editorial" value="{{this.sello_editorial}}">
 
         </fieldset>
 
         <fieldset class="formCol colDerecha">
 
-            <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple >
-            <label for="file" class= "mostrarImagen" ><span >+</span></label>
+            <label for="urlImagen">Url de la portada</label>
+            <input type="text" id="urlImagen" name="urlImagen" value="{{this.urlImagen}}">
+            <label for="descripcion">Descripcion</label>
+            <input type="text" id="descripcion" name="descripcion" value="{{this.descripcion}}">
             <label for="precio">Precio</label>
             <input type="number" name= "precio" value="{{this.precio}}">
             <label for="stock">Stock</label>
             <input type="number" name= "stock" value="{{this.stock}}">
+            <input type="submit" value="Guardar">
 
         </fieldset>
 
@@ -79,20 +114,23 @@
             <input type="text" name="autor" id="autor" value="{{this.autor}}">
             <label for="genero">Genero</label>
             <input type="text" name="genero" id="genero" value="{{this.genero}}">
-            <label for="sello">Sello</label>
-            <input type="text" name="sello" id="sello" value="{{this.sello}}">
-            <input type="submit" value="Guardar">
+            <label for="sello_editorial">Editorial/sello</label>
+            <input type="text" name="sello_editorial" id="sello_editorial" value="{{this.sello_editorial}}">
+            
 
         </fieldset>
 
         <fieldset class="formCol colDerecha">
 
-            <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple >
-            <label for="file" class= "mostrarImagen" ><span >+</span></label>
+            <label for="urlImagen">Url de la portada</label>
+            <input type="text" id="urlImagen" name="urlImagen" value="{{this.urlImagen}}">
+            <label for="descripcion">Descripcion</label>
+            <input type="text" id="descripcion" name="descripcion" value="{{this.descripcion}}">
             <label for="precio">Precio</label>
             <input type="number" name= "precio" value="{{this.precio}}">
             <label for="stock">Stock</label>
             <input type="number" name= "stock" value="{{this.stock}}">
+            <input type="submit" value="Guardar">
 
         </fieldset>
 

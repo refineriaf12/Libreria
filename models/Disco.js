@@ -3,10 +3,15 @@ let Schema = mongoose.Schema;
 const discoSchema = new Schema({
     titulo:  String, 
     autor: String,
-    stock:   Number,
-    precio: Number,
     genero: String,
-    sello: String
+    sello_editorial: String,
+    urlImagen: String,
+    descripcion:String,
+    stock:   Number,
+    precio: Number
+    
+   
+    
     
 });
 discoSchema.methods.toJSON = function() {   

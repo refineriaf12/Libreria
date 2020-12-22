@@ -28,6 +28,18 @@ discoController.show = function(req,res){
 
 };
 
+discoController.save = function(req, res){
+    let disco = new Disco( req.body );
+    
+    disco.save(function(err){
+        if( err ){ console.log('Error: ', err); return; }
+        
+        console.log("Disco guardado con exito");
+        res.redirect("/discoShow/"+disco._id);
+        
+    });
+};
+
 
 
 

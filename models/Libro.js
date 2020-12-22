@@ -1,12 +1,14 @@
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 const libroSchema = new Schema({
-    titulo: String, 
+    titulo:  String, 
     autor: String,
-    stock: Number,
-    precio: Number,
     genero: String,
-    editorial: String
+    sello_editorial: String,
+    urlImagen: String,
+    descripcion:String,
+    stock:   Number,
+    precio: Number
 });
 
 libroSchema.methods.toJSON = function() {   
