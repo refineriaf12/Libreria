@@ -22,7 +22,7 @@ libroController.show = function(req,res){
     Libro.findOne({_id: req.params.id}).lean().exec(function(err, libro){
         if( err ){ console.log('Error: ', err); return; }
         
-        res.render('edicionTemplate', {layout:'edicionLayout',libro:libro} );
+        res.render('edicionTemplate', {layout:'edicionLayout',libroReq:libro} );
     });
 
 
