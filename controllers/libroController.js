@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Libro = require('../models/Libro');
+const paths = require('../data/Paths.json');
 
 
 
@@ -39,5 +40,17 @@ libroController.save = function(req, res){
         
     });
 };
+
+libroController.delete = function(req, res){
+    
+    Libro.remove({_id: req.params.id}, function(err){
+        if( err ){ console.log('Error: ', err); return; }
+        
+        console.log("Libro eliminado!");
+        res.redirect(paths.bookCatalog.url);
+    });
+    
+};
+
 
 module.exports = libroController;

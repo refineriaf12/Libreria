@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const Disco = require('../models/Disco');
+const paths = require('../data/Paths.json');
+
 
 
 let discoController = {};
@@ -38,6 +40,17 @@ discoController.save = function(req, res){
         res.redirect("/discoShow/"+disco._id);
         
     });
+};
+
+discoController.delete = function(req, res){
+    
+    Disco.remove({_id: req.params.id}, function(err){
+        if( err ){ console.log('Error: ', err); return; }
+        
+        console.log("Disco eliminado!");
+        res.redirect(paths.discCatalog.url);
+    });
+    
 };
 
 

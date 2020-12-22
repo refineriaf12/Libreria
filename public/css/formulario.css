@@ -34,11 +34,17 @@ article form{
     display:block;
 }
 
-.mostrarImagen{
+.preview{
     width: 10rem;
     height: 10rem;
    position: relative; 
    overflow: hidden;  
+}
+
+.preview img{
+
+    width: 100%;
+
 }
 
 .mostrarImagen span{
