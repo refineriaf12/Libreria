@@ -44,7 +44,7 @@ discoController.save = function(req, res){
 
 discoController.delete = function(req, res){
     
-    Disco.remove({_id: req.params.id}, function(err){
+    Disco.deleteOne({_id: req.params.id}, function(err){
         if( err ){ console.log('Error: ', err); return; }
         
         console.log("Disco eliminado!");

@@ -43,7 +43,7 @@ libroController.save = function(req, res){
 
 libroController.delete = function(req, res){
     
-    Libro.remove({_id: req.params.id}, function(err){
+    Libro.deleteOne({_id: req.params.id}, function(err){
         if( err ){ console.log('Error: ', err); return; }
         
         console.log("Libro eliminado!");
