@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Disco = require('../models/Disco');
-const paths = require('../data/Paths.json');
 
 
 
@@ -8,10 +7,10 @@ let discoController = {};
 
 discoController.list = function(req,res){
 
-    Disco.find({}).lean().exec(function(err, discos){
+    Disco.find({}).lean().exec((err, discos)=>{
         if( err ){ console.log('Error: ', err); return; }
 
-        res.render('catalogoTemplate',{layout:'catalogoLayout',listaDiscos:discos,decision:false});
+        res.render('catalogoTemplate',{listaDiscos:discos,decision:false});
         
         
     });
@@ -19,21 +18,21 @@ discoController.list = function(req,res){
 
 };
 
-discoController.show = function(req,res){
+discoController.show = (req,res)=>{
 
-    Disco.findOne({_id: req.params.id}).lean().exec(function(err, disco){
+    Disco.findOne({_id: req.params.id}).lean().exec((err, disco)=>{
         if( err ){ console.log('Error: ', err); return; }
         
-        res.render('edicionTemplate', {layout:'edicionLayout', discoReq:disco} );
+        res.render('edicionTemplate', {discoReq:disco} );
     });
 
 
 };
 
-discoController.save = function(req, res){
+discoController.save = (req, res)=>{
     let disco = new Disco( req.body );
     
-    disco.save(function(err){
+    disco.save((err)=>{
         if( err ){ console.log('Error: ', err); return; }
         
         console.log("Disco guardado con exito");
@@ -42,13 +41,13 @@ discoController.save = function(req, res){
     });
 };
 
-discoController.delete = function(req, res){
+discoController.delete = (req, res)=>{
     
-    Disco.deleteOne({_id: req.params.id}, function(err){
+    Disco.deleteOne({_id: req.params.id}, (err)=>{
         if( err ){ console.log('Error: ', err); return; }
         
         console.log("Disco eliminado!");
-        res.redirect(paths.discCatalog.url);
+        res.redirect('/discCatalog');
     });
     
 };

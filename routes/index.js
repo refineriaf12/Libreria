@@ -1,32 +1,31 @@
 const express = require('express');
 const router = express.Router();
-const paths = require('../data/Paths.json');
 const welcome = require('../data/bienvenidos.json');
 
 
-router.get(paths.login.url ,function (req,res){
+router.get('/' ,(req,res)=>{
 
-    res.render('loginTemplate',{layout:'loginLayout',usuarioImagen:welcome});
+    res.render('loginTemplate',{usuarioImagen:welcome});
 
 
 });
 
-router.post(paths.loginform.url,function(req,res){
+router.post("/formularioLogin",(req,res)=>{
 
     res.redirect('/home');
   
   
 });
 
-router.get(paths.home.url,function(req,res){
+router.get('/home',(req,res)=>{
 
-    res.render('homeTemplate',{layout:'inicioLayout'});
+    res.render('homeTemplate');
 
 });
 
-router.get(paths.edit.url,function(req,res){
+router.get('/edit',(req,res)=>{
 
-    res.render('edicionTemplate',{layout:'edicionLayout'});
+    res.render('edicionTemplate');
   
 });
 

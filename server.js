@@ -10,17 +10,18 @@ require('./connection');
 app.engine('hbs',exphbs({
 
     layoutsDir:  __dirname +'/views/layouts',
-    extname: 'hbs',
-    partialsDir:  __dirname +'/views/partials'
+    partialsDir:  __dirname +'/views/partials',
+    defaultLayout: 'Layout',
+    extname: 'hbs'
 
 }));
 
 app.set('view engine', 'hbs');
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(index);
 app.use(libroRouter);
 app.use(discoRouter);
-app.use(express.static('public'));
 app.listen(3000);

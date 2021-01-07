@@ -1,16 +1,15 @@
 const mongoose = require('mongoose');
 const Libro = require('../models/Libro');
-const paths = require('../data/Paths.json');
 
 
 
 let libroController = {};
 
-libroController.list = function(req,res){
+libroController.list = (req,res)=>{
 
-    Libro.find({}).lean().exec(function(err, libros){
+    Libro.find({}).lean().exec((err, libros)=>{
         if( err ){ console.log('Error: ', err); return; }
-        res.render('catalogoTemplate',{layout:'catalogoLayout',listaLibros:libros,decision:true});
+        res.render('catalogoTemplate',{listaLibros:libros,decision:true});
 
         
     });
@@ -18,21 +17,21 @@ libroController.list = function(req,res){
 
 };
 
-libroController.show = function(req,res){
+libroController.show = (req,res)=>{
 
-    Libro.findOne({_id: req.params.id}).lean().exec(function(err, libro){
+    Libro.findOne({_id: req.params.id}).lean().exec((err, libro)=>{
         if( err ){ console.log('Error: ', err); return; }
         
-        res.render('edicionTemplate', {layout:'edicionLayout',libroReq:libro} );
+        res.render('edicionTemplate', {libroReq:libro} );
     });
 
 
 };
 
-libroController.save = function(req, res){
+libroController.save = (req, res)=>{
     let libro = new Libro( req.body );
     
-    libro.save(function(err){
+    libro.save((err)=>{
         if( err ){ console.log('Error: ', err); return; }
         
         console.log("Libro guardado con exito");
@@ -41,13 +40,13 @@ libroController.save = function(req, res){
     });
 };
 
-libroController.delete = function(req, res){
+libroController.delete = (req, res)=>{
     
-    Libro.deleteOne({_id: req.params.id}, function(err){
+    Libro.deleteOne({_id: req.params.id}, (err)=>{
         if( err ){ console.log('Error: ', err); return; }
         
         console.log("Libro eliminado!");
-        res.redirect(paths.bookCatalog.url);
+        res.redirect('/bookCatalog');
     });
     
 };
