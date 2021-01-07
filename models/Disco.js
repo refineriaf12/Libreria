@@ -8,15 +8,8 @@ const discoSchema = new Schema({
     urlImagen: String,
     descripcion:String,
     stock:   Number,
-    precio: Number
-    
-   
-    
+    precio: Number  
     
 });
-discoSchema.methods.toJSON = function() {   
-    let disco = this;
-    let discoObject = disco.toObject();
-    return discoObject;
-}
+
 module.exports = mongoose.model('Disco', discoSchema);
