@@ -28,6 +28,19 @@ libroController.show = (req,res)=>{
 
 };
 
+libroController.edit = async (req,res)=>{
+
+    const filter = { _id: req.params.id};
+    const update = { titulo: req.body.titulo , autor:req.body.autor, genero:req.body.genero,
+         sello_editorial:req.body.sello_editorial, urlImagen:req.body.urlImagen,descripcion:req.body.descripcion,
+        stock:req.body.stock,precio:req.body.precio};
+
+    await Libro.findOneAndUpdate(filter,update);
+    res.redirect('/bookCatalog');
+
+
+};
+
 libroController.save = (req, res)=>{
     let libro = new Libro( req.body );
     

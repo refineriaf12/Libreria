@@ -71,7 +71,7 @@
     </form>
 
    {{#with libroReq}}
-    <form action="/editBook" method="post"class="libroForm formulario">
+    <form action="/editBook/{{this._id}}" method="post"class="libroForm formulario">
 
         <fieldset class="formCol colIzquierda">
 
@@ -115,7 +115,7 @@
    {{/with}}
 
    {{#with discoReq}}
-    <form action="/editDisc" method="post" class="discoForm formulario">
+    <form action="/editDisc/{{this._id}}" method="post" class="discoForm formulario">
 
         <fieldset class="formCol colIzquierda">
 

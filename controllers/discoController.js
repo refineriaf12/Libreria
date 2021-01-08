@@ -29,6 +29,19 @@ discoController.show = (req,res)=>{
 
 };
 
+discoController.edit = async (req,res)=>{
+
+    const filter = { _id: req.params.id};
+    const update = { titulo: req.body.titulo , autor:req.body.autor, genero:req.body.genero,
+         sello_editorial:req.body.sello_editorial, urlImagen:req.body.urlImagen,descripcion:req.body.descripcion,
+        stock:req.body.stock,precio:req.body.precio};
+
+    await Disco.findOneAndUpdate(filter,update);
+    res.redirect('/discCatalog');
+
+
+};
+
 discoController.save = (req, res)=>{
     let disco = new Disco( req.body );
     
