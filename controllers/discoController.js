@@ -5,7 +5,7 @@ const Disco = require('../models/Disco');
 
 let discoController = {};
 
-discoController.list = function(req,res){
+discoController.list = (req,res)=>{
 
     Disco.find({}).lean().exec((err, discos)=>{
         if( err ){ console.log('Error: ', err); return; }

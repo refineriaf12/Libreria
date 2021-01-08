@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const user = require('../controllers/userController');
 const welcome = require('../data/bienvenidos.json');
 
 
@@ -10,12 +11,8 @@ router.get('/' ,(req,res)=>{
 
 });
 
-router.post("/formularioLogin",(req,res)=>{
+router.post("/formularioLogin",user.authentication);
 
-    res.redirect('/home');
-  
-  
-});
 
 router.get('/home',(req,res)=>{
 
