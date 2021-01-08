@@ -11,7 +11,6 @@ app.engine('hbs',exphbs({
 
     layoutsDir:  __dirname +'/views/layouts',
     partialsDir:  __dirname +'/views/partials',
-    defaultLayout: 'Layout',
     extname: 'hbs'
 
 }));
