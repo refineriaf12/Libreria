@@ -36,7 +36,7 @@ libroController.edit = async (req,res)=>{
         stock:req.body.stock,precio:req.body.precio};
 
     await Libro.findOneAndUpdate(filter,update);
-    res.redirect('/bookCatalog');
+    
 
 
 };

@@ -37,7 +37,7 @@ discoController.edit = async (req,res)=>{
         stock:req.body.stock,precio:req.body.precio};
 
     await Disco.findOneAndUpdate(filter,update);
-    res.redirect('/discCatalog');
+    
 
 
 };
