@@ -1,10 +1,10 @@
-    <h2  class="listaLibrosTitulo">Lista de libros</h2>
-    <ul  id="listaLibros">
-        {{#each listaLibros}}
-            <li>
+{{>atoms/libro/titulo_lista_libros}}
+<ul  id="listaLibros">
+    {{#each listaLibros}}
+        <li>
 
-                <a href="/libroShow/{{this._id}}">{{>molecules/libro}}</a>
+            <a href="/libroShow/{{this._id}}">{{>molecules/libro/libro}}</a>
 
-            </li>
-        {{/each}}
-    </ul>
+        </li>
+    {{/each}}
+</ul>

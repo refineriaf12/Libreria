@@ -9,7 +9,7 @@ libroController.list = (req,res)=>{
 
     Libro.find({}).lean().exec((err, libros)=>{
         if( err ){ console.log('Error: ', err); return; }
-        res.render('catalogoTemplate',{listaLibros:libros,decision:true});
+        res.render('templates/catalogoTemplate',{listaLibros:libros,decision:true});
         
     });
 
@@ -20,7 +20,7 @@ libroController.show = (req,res)=>{
     Libro.findOne({_id: req.params.id}).lean().exec((err, libro)=>{
         if( err ){ console.log('Error: ', err); return; }
         
-        res.render('edicionTemplate', {libroReq:libro} );
+        res.render('templates/edicionTemplate', {libroReq:libro} );
     });
 
 };

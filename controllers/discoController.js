@@ -10,7 +10,7 @@ discoController.list = (req,res)=>{
     Disco.find({}).lean().exec((err, discos)=>{
         if( err ){ console.log('Error: ', err); return; }
 
-        res.render('catalogoTemplate',{listaDiscos:discos,decision:false});   
+        res.render('templates/catalogoTemplate',{listaDiscos:discos,decision:false});   
         
     });
 
@@ -21,7 +21,7 @@ discoController.show = (req,res)=>{
     Disco.findOne({_id: req.params.id}).lean().exec((err, disco)=>{
         if( err ){ console.log('Error: ', err); return; }
         
-        res.render('edicionTemplate', {discoReq:disco} );
+        res.render('templates/edicionTemplate', {discoReq:disco} );
     });
 
 };

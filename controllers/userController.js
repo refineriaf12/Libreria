@@ -16,7 +16,7 @@ userController.authentication = async (req,res)=>{
 
     if(userfind){
 
-        return res.render('homeTemplate');
+        return res.render('templates/homeTemplate');
 
     }
 

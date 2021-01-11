@@ -1,164 +1,19 @@
 <article>
 
-    <a href="/home">&#8592;Volver</a>
-    <div class="tab">
-        <button class="tablinks" onclick="openForm(event, 'LibroForm')" id="defaultOpen">Libro</button>
-        <button class="tablinks" onclick="openForm(event, 'DiscoForm')">Disco</button>
-    </div>
+    {{>atoms/formularios/volver}}
+    {{>molecules/formularios/tabs}}
 
-    <form action="/createBook" method="POST" id="LibroForm" class="newForm formulario tabcontent">
-
-        <fieldset class="formCol colIzquierda">
-            
-            <label for="titulo">Titulo</label>
-            <input type="text" name="titulo" id="titulo">
-            <label for="autor">Autor</label>
-            <input type="text" name="autor" id="autor" >
-            <label for="genero">Genero</label>
-            <input type="text" name="genero" id="genero" >
-            <label for="sello_editorial">Editorial/sello</label>
-            <input type="text" name="sello_editorial" id="sello_editorial" >
-            
-
-        </fieldset>
-
-        <fieldset class="formCol colDerecha">
-
-            <label for="urlImagen">Url de la portada</label>
-            <input type="text" id="urlImagen" name="urlImagen">
-            <label for="descripcion">Descripcion</label>
-            <input type="text" id="descripcion" name="descripcion">
-            <label for="precio">Precio</label>
-            <input type="number" name= "precio" >
-            <label for="stock">Stock</label>
-            <input type="number" name= "stock" >
-            <input type="submit" value="Guardar">
-
-        </fieldset>
-
-    </form>
-
-    <form action="/createDisc" method="POST" id="DiscoForm" class="newForm formulario tabcontent">
-
-        <fieldset class="formCol colIzquierda">
-            
-            <label for="titulo">Titulo</label>
-            <input type="text" name="titulo" id="titulo" >
-            <label for="autor">Autor</label>
-            <input type="text" name="autor" id="autor" >
-            <label for="genero">Genero</label>
-            <input type="text" name="genero" id="genero" >
-            <label for="sello_editorial">Editorial/sello</label>
-            <input type="text" name="sello_editorial" id="sello_editorial" >
-            
-
-        </fieldset>
-
-        <fieldset class="formCol colDerecha">
-
-            <label for="urlImagen">Url de la portada</label>
-            <input type="text" id="urlImagen" name="urlImagen">
-            <label for="descripcion">Descripcion</label>
-            <input type="text" id="descripcion" name="descripcion">
-            <label for="precio">Precio</label>
-            <input type="number" name= "precio" >
-            <label for="stock">Stock</label>
-            <input type="number" name= "stock">
-            <input type="submit" value="Guardar">
-
-        </fieldset>
-
-    </form>
+    {{>organisms/formularios/nuevo_libro}}
+    {{>organisms/formularios/nuevo_disco}}
 
    {{#with libroReq}}
-    <form action="/editBook/{{this._id}}" method="post"class="libroForm formulario edicion">
-
-        <fieldset class="formCol colIzquierda">
-
-            
-            <label for="titulo">Titulo</label>
-            <input type="text" name="titulo" id="titulo" value="{{this.titulo}}">
-            <label for="autor">Autor</label>
-            <input type="text" name="autor" id="autor" value="{{this.autor}}">
-            <label for="genero">Genero</label>
-            <input type="text" name="genero" id="genero" value="{{this.genero}}">
-            <label for="sello_editorial">Editorial/sello</label>
-            <input type="text" name="sello_editorial" id="sello_editorial" value="{{this.sello_editorial}}">
-
-        </fieldset>
-
-        <fieldset class="formCol colDerecha">
-
-            <figure class="preview">
-
-                <img src="{{this.urlImagen}}" alt="{{this.descripcion}}">
-
-            </figure>
-            <label for="urlImagen">Url de la portada</label>
-            <input type="text" id="urlImagen" name="urlImagen" value="{{this.urlImagen}}">
-            <label for="descripcion">Descripcion</label>
-            <input type="text" id="descripcion" name="descripcion" value="{{this.descripcion}}">
-            <label for="precio">Precio</label>
-            <input type="number" name= "precio" value="{{this.precio}}">
-            <label for="stock">Stock</label>
-            <input type="number" name= "stock" value="{{this.stock}}">
-            <input type="submit" value="Guardar">
-            
-
-
-        </fieldset>
-
-        
-        
-    </form>
-    <a href="/deleteBook/{{this._id}}">Borrar Libro</a>
-    <a href="#" class="botonEditar">Editar</a>
+    {{>organisms/formularios/editar_libro}}
+    {{>atoms/formularios/borrar_libro}}
    {{/with}}
 
    {{#with discoReq}}
-    <form action="/editDisc/{{this._id}}" method="post" class="discoForm formulario edicion" >
-
-        <fieldset class="formCol colIzquierda">
-
-            
-            <label for="titulo">Titulo</label>
-            <input type="text" name="titulo" id="titulo" value="{{this.titulo}}">
-            <label for="autor">Autor</label>
-            <input type="text" name="autor" id="autor" value="{{this.autor}}">
-            <label for="genero">Genero</label>
-            <input type="text" name="genero" id="genero" value="{{this.genero}}">
-            <label for="sello_editorial">Editorial/sello</label>
-            <input type="text" name="sello_editorial" id="sello_editorial" value="{{this.sello_editorial}}">
-            
-
-        </fieldset>
-
-        <fieldset class="formCol colDerecha">
-
-            <figure class="preview">
-
-                <img src="{{this.urlImagen}}" alt="{{this.descripcion}}">
-
-            </figure>
-            <label for="urlImagen">Url de la portada</label>
-            <input type="text" id="urlImagen" name="urlImagen" value="{{this.urlImagen}}">
-            <label for="descripcion">Descripcion</label>
-            <input type="text" id="descripcion" name="descripcion" value="{{this.descripcion}}">
-            <label for="precio">Precio</label>
-            <input type="number" name= "precio" value="{{this.precio}}">
-            <label for="stock">Stock</label>
-            <input type="number" name= "stock" value="{{this.stock}}">
-            <input type="submit" value="Guardar">
-            
-
-        </fieldset>
-
-        
-        
-
-    </form>
-    <a href="/deleteDisc/{{this._id}}">Borrar Disco</a>
-    <a href="#" class="botonEditar">Editar</a>
+    {{>organisms/formularios/editar_disco}}
+    {{>atoms/formularios/borrar_disco}}
    {{/with}}
 
    

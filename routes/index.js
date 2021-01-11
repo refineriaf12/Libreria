@@ -6,7 +6,7 @@ const welcome = require('../data/bienvenidos.json');
 
 router.get('/' ,(req,res)=>{
 
-    res.render('loginTemplate',{usuarioImagen:welcome});
+    res.render('templates/loginTemplate',{usuarioImagen:welcome});
 
 
 });
@@ -16,13 +16,13 @@ router.post("/formularioLogin",user.authentication);
 
 router.get('/home',(req,res)=>{
 
-    res.render('homeTemplate');
+    res.render('templates/homeTemplate');
 
 });
 
 router.get('/new',(req,res)=>{
 
-    res.render('edicionTemplate');
+    res.render('templates/edicionTemplate');
   
 });
 
