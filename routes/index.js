@@ -20,7 +20,7 @@ router.get('/home',(req,res)=>{
 
 });
 
-router.get('/edit',(req,res)=>{
+router.get('/new',(req,res)=>{
 
     res.render('edicionTemplate');
   

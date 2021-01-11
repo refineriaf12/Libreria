@@ -1,10 +1,8 @@
-
-
-        <form class="formularioLogin" action="/formularioLogin" method="post">
-            {{#each usuarioImagen}}
-                {{>atoms/welcome}}
-            {{/each}}
-                <input type="text" id= "username" name="username" placeholder="USUARIO" required>
-                <input type="submit" value="ENTRAR" id= "entrar" class= "btnLogin">
-        </form> 
+<form class="formularioLogin" action="/formularioLogin" method="post">
+    {{#each usuarioImagen}}
+        {{>atoms/welcome}}
+    {{/each}}
+        <input type="text" id= "username" name="username" placeholder="USUARIO" required>
+        <input type="submit" value="ENTRAR" id= "entrar" class= "btnLogin">
+</form> 
 

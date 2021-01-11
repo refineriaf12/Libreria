@@ -71,7 +71,7 @@
     </form>
 
    {{#with libroReq}}
-    <form action="/editBook/{{this._id}}" method="post"class="libroForm formulario">
+    <form action="/editBook/{{this._id}}" method="post"class="libroForm formulario edicion">
 
         <fieldset class="formCol colIzquierda">
 
@@ -112,10 +112,11 @@
         
     </form>
     <a href="/deleteBook/{{this._id}}">Borrar Libro</a>
+    <a href="#" class="botonEditar">Editar</a>
    {{/with}}
 
    {{#with discoReq}}
-    <form action="/editDisc/{{this._id}}" method="post" class="discoForm formulario">
+    <form action="/editDisc/{{this._id}}" method="post" class="discoForm formulario edicion" >
 
         <fieldset class="formCol colIzquierda">
 
@@ -157,6 +158,7 @@
 
     </form>
     <a href="/deleteDisc/{{this._id}}">Borrar Disco</a>
+    <a href="#" class="botonEditar">Editar</a>
    {{/with}}
 
    

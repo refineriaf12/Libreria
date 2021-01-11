@@ -1,5 +1,4 @@
-let mongoose = require('mongoose');
-let Schema = mongoose.Schema;
+const {Schema, model} = require('mongoose');
 const discoSchema = new Schema({
     titulo:  String, 
     autor: String,
@@ -12,4 +11,4 @@ const discoSchema = new Schema({
     
 });
 
-module.exports = mongoose.model('Disco', discoSchema);
+module.exports = model('Disco', discoSchema);

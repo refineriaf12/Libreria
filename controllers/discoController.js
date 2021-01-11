@@ -10,11 +10,9 @@ discoController.list = (req,res)=>{
     Disco.find({}).lean().exec((err, discos)=>{
         if( err ){ console.log('Error: ', err); return; }
 
-        res.render('catalogoTemplate',{listaDiscos:discos,decision:false});
-        
+        res.render('catalogoTemplate',{listaDiscos:discos,decision:false});   
         
     });
-
 
 };
 
@@ -26,7 +24,6 @@ discoController.show = (req,res)=>{
         res.render('edicionTemplate', {discoReq:disco} );
     });
 
-
 };
 
 discoController.edit = async (req,res)=>{
@@ -37,8 +34,7 @@ discoController.edit = async (req,res)=>{
         stock:req.body.stock,precio:req.body.precio};
 
     await Disco.findOneAndUpdate(filter,update);
-    
-
+    res.redirect('/discCatalog');
 
 };
 

@@ -1,5 +1,4 @@
-let mongoose = require('mongoose');
-let Schema = mongoose.Schema;
+const {Schema, model} = require('mongoose');
 const libroSchema = new Schema({
     titulo:  String, 
     autor: String,
@@ -11,4 +10,4 @@ const libroSchema = new Schema({
     precio: Number
 });
 
-module.exports = mongoose.model('Libro', libroSchema);
+module.exports = model('Libro', libroSchema);

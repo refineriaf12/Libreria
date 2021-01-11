@@ -10,10 +10,8 @@ libroController.list = (req,res)=>{
     Libro.find({}).lean().exec((err, libros)=>{
         if( err ){ console.log('Error: ', err); return; }
         res.render('catalogoTemplate',{listaLibros:libros,decision:true});
-
         
     });
-
 
 };
 
@@ -25,7 +23,6 @@ libroController.show = (req,res)=>{
         res.render('edicionTemplate', {libroReq:libro} );
     });
 
-
 };
 
 libroController.edit = async (req,res)=>{
@@ -36,8 +33,7 @@ libroController.edit = async (req,res)=>{
         stock:req.body.stock,precio:req.body.precio};
 
     await Libro.findOneAndUpdate(filter,update);
-    
-
+    res.redirect('/bookCatalog');
 
 };
 
