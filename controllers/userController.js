@@ -16,7 +16,7 @@ userController.authentication = async (req,res)=>{
 
     if(userfind){
 
-        return res.render('templates/homeTemplate');
+        return res.redirect('/bookCatalog');
 
     }
 

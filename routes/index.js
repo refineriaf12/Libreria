@@ -13,13 +13,6 @@ router.get('/' ,(req,res)=>{
 
 router.post("/formularioLogin",user.authentication);
 
-
-router.get('/home',(req,res)=>{
-
-    res.render('templates/homeTemplate');
-
-});
-
 router.get('/new',(req,res)=>{
 
     res.render('templates/edicionTemplate');

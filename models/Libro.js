@@ -7,7 +7,7 @@ const libroSchema = new Schema({
     urlImagen: String,
     descripcion:String,
     stock:   Number,
-    precio: Number
+    precio: String
 });
 
 module.exports = model('Libro', libroSchema);

@@ -7,7 +7,7 @@ const discoSchema = new Schema({
     urlImagen: String,
     descripcion:String,
     stock:   Number,
-    precio: Number  
+    precio: String  
     
 });
 
