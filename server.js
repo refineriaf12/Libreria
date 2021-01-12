@@ -16,7 +16,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use(require('./routes/index'));
-app.use(require('./routes/libroRouter'));
-app.use(require('./routes/discoRouter'));
+app.use(require('./routes/indexRouter'));
+app.use(require('./routes/bookRouter'));
+app.use(require('./routes/discRouter'));
 app.listen(3000);
