@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const user = require('../controllers/userController');
-const libro = require('../controllers/libroController');
+const controller = require('../controllers/generalController');
 const welcome = require('../data/bienvenidos.json');
 
 
@@ -20,6 +20,8 @@ router.get('/new',(req,res)=>{
   
 });
 
-router.get('/home',libro.listAll);
+router.get('/home',controller.listAll);
+router.post('/find',controller.findAll);
+
 
 module.exports = router;

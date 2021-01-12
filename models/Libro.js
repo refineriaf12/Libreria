@@ -10,4 +10,6 @@ const libroSchema = new Schema({
     precio: String
 });
 
+libroSchema.index({titulo:"text"});
+
 module.exports = model('Libro', libroSchema);

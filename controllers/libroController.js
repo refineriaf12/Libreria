@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Libro = require('../models/Libro');
-const Disco = require('../models/Disco');
 
 
 
@@ -61,18 +60,6 @@ libroController.delete = (req, res)=>{
     });
     
 };
-
-libroController.listAll = async (req,res)=>{
-
-     const libros =await Libro.find({}).lean();
-     const discos =await Disco.find({}).lean();
-
-    console.log();
-
-    res.render('templates/homeTemplate',{listaLibros:libros,listaDiscos:discos});
-
-};
-
 
 module.exports = libroController;
 

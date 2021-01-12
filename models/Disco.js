@@ -11,4 +11,6 @@ const discoSchema = new Schema({
     
 });
 
+discoSchema.index({titulo:"text"});
+
 module.exports = model('Disco', discoSchema);
