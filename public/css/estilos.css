@@ -13,7 +13,7 @@ section {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     align-content:center;
-    height:100vh;
+    height:90vh;
     grid-gap: 1rem;
 }
 
