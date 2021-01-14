@@ -8,7 +8,7 @@
             "type": "node-terminal",
             "command": "npm run start",
             "request": "launch",
-            "name": "Launch Chrome against localhost"
+            "name": "Debugger"
         }
     ]
 }
