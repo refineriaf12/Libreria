@@ -68,6 +68,6 @@
   "price": 20.5,
   "genre": "Rock alternativo",
   "img_alt": "portada del disco Stadium Arcadium",
-  "urlImagen": "../img/stadium.jpg",
+  "img_url": "../img/stadium.jpg",
   "label_publisher": "Ni idea"
 }]
