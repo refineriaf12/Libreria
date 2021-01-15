@@ -21,8 +21,6 @@ router.get('/new',(req,res)=>{
 
 router.get('/home',controller.listAll);
 
-
 router.post('/find',controller.findAll);
-
 
 module.exports = router;

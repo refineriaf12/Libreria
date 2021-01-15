@@ -1,7 +1,5 @@
 const Book = require('../models/Book');
 
-
-
 let bookController = {};
 
 bookController.list = (req,res)=>{

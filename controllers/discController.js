@@ -1,7 +1,5 @@
 const Disc = require('../models/Disc');
 
-
-
 let discController = {};
 
 discController.list = (req,res)=>{
@@ -59,8 +57,5 @@ discController.delete = (req, res)=>{
     });
     
 };
-
-
-
 
 module.exports = discController;
