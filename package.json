@@ -1,0 +1,21 @@
+{
+  "name": "libreria2",
+  "version": "2.0.0",
+  "description": "refactor del proyecto",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "handlebars": "^4.7.6",
+    "mongoose": "^5.11.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "Refineria",
+  "license": "ISC"
+}

@@ -1,0 +1,48 @@
+{{>nav}}
+
+<main>
+    <section>
+        <h1>Lista de libros</h1>
+                
+                <ul>
+                    {{#each book_list}}
+                    <li>
+                        <a href="">
+                            <figure>
+                                <img src="{{this.img_url}}" alt="{{this.img_alt}}">
+                            </figure>
+                            <figcaption>
+                                Titulo:{{this.title}} 
+                                    
+                            </figcaption>
+                            <p>Autor:{{this.author}}</p>
+                            <p>Precio:{{this.price}}</p>
+                        </a>
+                    </li>
+                    
+                    {{/each}}
+                </ul>
+    </section>
+    <section>
+        <h1>Lista de discos</h1>
+                <ul>
+                    {{#each disc_list}}
+                    <li>
+                        <a href="">
+                            <figure>
+                                <img src="{{this.img_url}}" alt="{{this.img_alt}}">
+                            </figure>
+                            <figcaption>
+                                Titulo:{{this.title}} 
+                                    
+                            </figcaption>
+                            <p>Autor:{{this.author}}</p>
+                            <p>Precio:{{this.price}}</p>
+                        </a>
+                    </li>
+                    
+                    {{/each}}
+                </ul>
+
+    </section>
+</main>
