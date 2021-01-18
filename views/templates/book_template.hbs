@@ -1,0 +1,33 @@
+{{>nav}}
+
+<main>
+
+    <section>
+        {{#if detalle}}
+            <figure>
+                <img src="{{this.img_url}}" alt="{{this.img_alt}}">
+            </figure>
+            <h1>
+                {{this.title}}
+            </h1>
+            <h2>
+                {{this.author}}
+            </h2>
+            <p>
+                {{this.genre}}
+            </p>
+            <p>
+                {{this.label_publisher}}
+            </p>
+            <p>
+                {{this.stock}}
+            </p>
+            <p>
+                {{this.price}}
+            </p>
+        {{else}}
+            <p>esto no va ni a tiros</p>
+        {{/if}}
+    </section>
+
+</main>

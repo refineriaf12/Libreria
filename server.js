@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require (`mongoose`);
 
 const book_controller =require('./controllers/book_controller');
+const disc_controller =require('./controllers/disc_controller')
 
 mongoose.connect('mongodb://localhost/Libreria', {useNewUrlParser: true,useUnifiedTopology: true,useFindAndModify: false, useCreateIndex:true});
 const db = mongoose.connection;
@@ -29,11 +30,12 @@ app.get("/new",(req,res)=>{
     res.render("templates/edit_template")
 });
 app.get("/catalog_book", book_controller.list);
+app.get("/catalog_disc",disc_controller.list);
 
-app.get("/catalog_disc",(req,res)=>{
-    res.render("templates/catalog_template")
-});
+app.get("/book_detail/:id",book_controller.show);
+
 
 app.set("view engine","hbs");
 app.use(express.static("public"));
+
 app.listen(5000); 
