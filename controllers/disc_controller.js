@@ -18,6 +18,9 @@ disc_controller.list = async (req, res) =>{
     res.render('templates/catalog_template', {type:false,disc_list:discs});
 }
 
-
+disc_controller.show = (req, res) => {
+    const disc = Disc.findOne({_id:req.params.id}).lean();
+    res.render('templates/disc_template',{detalle:disc,detalle:true});
+}
 
 module.exports= disc_controller;

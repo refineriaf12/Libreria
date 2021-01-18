@@ -33,6 +33,7 @@ app.get("/catalog_book", book_controller.list);
 app.get("/catalog_disc",disc_controller.list);
 
 app.get("/book_detail/:id",book_controller.show);
+app.get("/disc_detail/:id",disc_controller.show);
 
 
 app.set("view engine","hbs");

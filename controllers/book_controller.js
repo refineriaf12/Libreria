@@ -1,5 +1,6 @@
 'use strict';
 
+
 const Book =require(`../models/Book`);
 
 const book_controller ={};
@@ -13,10 +14,10 @@ const book_controller ={};
 //     });
 // }
 // book_controller.show = (req, res) =>{
-//     Book.findById({_id : req.params.id}).lean().exec((err, book)=>{
+//     Book.findOne({_id: req.params.id}).lean().exec((err, book)=>{
 //         if( err ){ console.log('Error: ', err); return; }
 
-//         res.render('templates/book_template',{detalle:book});   
+//         res.render('templates/book_template',{detalle:book,detalle:true});   
         
 //     });
 // }
@@ -27,9 +28,8 @@ book_controller.list = async (req, res) =>{
 }
 
 book_controller.show = (req, res) => {
-    const book = Book.findOne({_id:req.params.id}).lean();
+    const book = Book.findById({_id: req.params.id}).lean();
     res.render('templates/book_template',{detalle:book,detalle:true});
 }
-
 
 module.exports= book_controller;
