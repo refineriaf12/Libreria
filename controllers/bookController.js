@@ -18,7 +18,7 @@ bookController.show = (req,res)=>{
     Book.findOne({_id: req.params.id}).lean().exec((err, book)=>{
         if( err ){ console.log('Error: ', err); return; }
         
-        res.render('templates/editTemplate', {bookReq:book} );
+        res.render('templates/editTemplate', {bookReq:book});
     });
 
 };
