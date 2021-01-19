@@ -26,4 +26,3 @@ function openForm(evt, tabName) {
 	evt.currentTarget.className += " active";
 }
 document.querySelector("#defaultOpen").click();
-

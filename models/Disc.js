@@ -1,6 +1,10 @@
 const {Schema, model} = require('mongoose');
 const discSchema = new Schema({
-    title:  String, 
+    title:{
+        type: String,
+        required:true
+
+    }, 
     author: String,
     genre: String,
     label_publisher: String,
