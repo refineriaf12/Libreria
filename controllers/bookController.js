@@ -28,7 +28,7 @@ bookController.edit = async (req,res)=>{
     const filter = { _id: req.params.id};
     const update = { title: req.body.title , author:req.body.author, genre:req.body.genre,
         label_publisher:req.body.label_publisher, img_url:req.body.img_url,img_alt:req.body.img_alt,
-        stock:req.body.stock,price:req.body.price};
+        stock:req.body.stock,price:req.body.price,availability:req.body.availability};
 
     await Book.findOneAndUpdate(filter,update);
     res.redirect('/bookCatalog');
@@ -57,6 +57,8 @@ bookController.delete = (req, res)=>{
     });
     
 };
+
+bookController.sell = (req,res)=>{};
 
 module.exports = bookController;
 

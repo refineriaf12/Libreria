@@ -11,7 +11,8 @@ const bookSchema = new Schema({
     img_url: String,
     img_alt:String,
     stock:   Number,
-    price: String
+    price: String,
+    availability:String
 });
 
 bookSchema.index({title:"text"});
