@@ -3,7 +3,7 @@
     grid-column: 4 / 6;
     grid-row: 2;
     padding:5rem 2rem 5rem 2rem;
-    background-color:#0075FF;
+    background-color: rgb(255, 255, 255, 0.9);
     
 }
 
@@ -18,7 +18,7 @@
     
 }
 .formularioLogin input::placeholder{
-    color: #c4c4c4;
+    color: #f96e58;
     text-align: center;
 }
 
