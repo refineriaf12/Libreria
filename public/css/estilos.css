@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
 @import url("navBar.css");
 @import url("listaCatalogo.css");
 @import url("formulario.css");
 @import url("login.css");
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+}
 
 body{
     background-image: url("https://static3.elcorreo.com/www/multimedia/201907/22/media/cortadas/alfombra-pvc-discos-vinilos1-kWvC-U80815105344o8D-1248x770@El%20Correo.jpg");
@@ -64,7 +71,7 @@ h2{
   
   /* Change background color of buttons on hover */
   .tab button:hover {
-    background-color: #ddd;
+    background-color: #ccc;
   }
   
   /* Create an active/current tablink class */

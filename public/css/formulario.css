@@ -2,7 +2,7 @@ article{
     grid-column: 3/7;
     grid-row: 2;
     background-color: rgb(255, 255, 255, 0.9);
-    padding: 0.3rem;  
+    padding: 1rem;  
 
 }
 
@@ -27,6 +27,9 @@ article form input[type="submit"]{
     color: white;
 }
 
+article form label{
+    margin: 1rem 0;
+}
 
 .colIzquierda{
     grid-column: 1/2;
