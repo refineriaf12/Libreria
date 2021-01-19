@@ -6,10 +6,18 @@
     grid-gap:1rem;
     background-color: rgb(255, 255, 255, 0.9);
     padding: 1rem 0;
+    justify-items: center;
+}
+
+
+#listaLibros figure{
+    width: 10vw;
+    height: 10vw;
+    overflow: hidden;
 }
 
 #listaLibros img{
-    width:50%;
+    width:100%;
 }
 
 #listaDiscos{
@@ -20,9 +28,19 @@
     grid-gap:1rem;
     background-color: rgb(255, 255, 255, 0.9);
     padding: 1rem 0;
+    justify-items: center;
 }
+
+
+#listaDiscos figure{
+    width: 10vw;
+    height: 10vw;
+    overflow: hidden;
+    margin:0
+}
+
 #listaDiscos img{
-    width:77%;
+    width:100%;
 }
 
 .listaLibrosTitulo{
@@ -37,4 +55,11 @@
 #listaDiscos li, #listaLibros li{
     justify-content: center;
     text-align: center;
+}
+
+.main-home .home-bookList #listaLibros{
+    grid-column: 1/9;
+}
+.main-home .home-discList #listaDiscos{
+    grid-column: 1/9;
 }

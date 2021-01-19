@@ -13,6 +13,20 @@ article form{
     padding: 1rem ;
    
 }
+article form input{
+    border: none;
+    border-radius: 6px;
+    height: 35px;
+    width: 250px;
+    margin-top: 8px;
+    padding: 0 10px;
+    border: 1px solid #f96e58;
+}
+article form input[type="submit"]{
+    background-color: #f96e58;
+    color: white;
+}
+
 
 .colIzquierda{
     grid-column: 1/2;
@@ -37,14 +51,12 @@ article form{
 .preview{
     width: 10rem;
     height: 10rem;
-   position: relative; 
-   overflow: hidden;  
+    position: relative; 
+    overflow: hidden;  
 }
 
 .preview img{
-
     width: 100%;
-
 }
 
 .mostrarImagen span{
@@ -77,6 +89,6 @@ article a{
     text-decoration: none;
     background-color: #C4C4C4;
     padding: 0.2rem;
-    margin: 0.2rem;
+    margin: 1rem;
     color: black;
 }

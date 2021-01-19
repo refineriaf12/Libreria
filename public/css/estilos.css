@@ -9,7 +9,30 @@ body{
     background-size:cover;
 }
 
+.main-home{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 1rem;
+}
 section {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-content:center;
+    height:90vh;
+    grid-gap: 1rem;
+}
+
+.main-home .home-bookList{
+  grid-column: 2/6;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-content:center;
+    height:90vh;
+    grid-gap: 1rem;
+}
+
+.main-home .home-discList{
+  grid-column: 6/10;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     align-content:center;
@@ -21,18 +44,12 @@ h2{
     color: white;
 }
 
-.hidden{
-
-    display: none;
-
-}
-
-
 .tab {
+    display: flex;
     overflow: hidden;
-    border: 1px solid #ccc;
-    border-bottom:none;
-    justify-content: end;
+    justify-content: flex-end;
+    border-bottom: 3px solid#f96e58;
+    margin-bottom: 1rem;
 }
   
   /* Style the buttons that are used to open the tab content */
@@ -52,13 +69,18 @@ h2{
   
   /* Create an active/current tablink class */
   .tab button.active {
-    background-color: #ccc;
+    background-color:#f96e58;
   }
   
   /* Style the tab content */
   .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+    margin-top: 1rem;
   }
+
+.hidden{
+
+    display: none;
+
+}
