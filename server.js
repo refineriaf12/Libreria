@@ -39,4 +39,4 @@ app.get("/disc_detail/:id",disc_controller.show);
 app.set("view engine","hbs");
 app.use(express.static("public"));
 
-app.listen(5000); 
+app.listen(3000); 
