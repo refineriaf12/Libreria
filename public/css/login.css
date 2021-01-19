@@ -2,20 +2,24 @@
 .formularioLogin{
     grid-column: 4 / 6;
     grid-row: 2;
-    padding:2rem 2rem 5rem 2rem;
+    padding:5rem 2rem 5rem 2rem;
     background-color:#0075FF;
     
 }
 
 .formularioLogin input{
+    border: none;
+    border-radius: 6px;
+    height: 35px;
     width: 100%;
     margin: 1rem 0;
-    height: 2rem;
-    text-align: center;
+    padding: 0 10px;
+    border: 1px solid #f96e58;
     
 }
 .formularioLogin input::placeholder{
     color: #c4c4c4;
+    text-align: center;
 }
 
 
@@ -30,6 +34,7 @@
 .formularioLogin figure{
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
 
 }
 .formularioLogin img{
