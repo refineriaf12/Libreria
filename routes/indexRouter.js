@@ -24,6 +24,6 @@ router.get('/home',controller.listAll);
 
 router.post('/find',controller.findAll);
 
-router.get('/sell/:id',saleController.create);
+// router.get('/sell/:id',saleController.create);
 
 module.exports = router;
