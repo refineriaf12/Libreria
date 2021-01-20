@@ -6,19 +6,16 @@ nav ul{
     padding: 15px 25px;
     background-color: #f96e58;
 }
-
 nav ul li{
     padding: 15px;
     color: white;
 }
-
 nav ul li a{
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
 }
-
 nav input[type="search"]{
     border: none;
     border-radius: 6px 0 0 6px;

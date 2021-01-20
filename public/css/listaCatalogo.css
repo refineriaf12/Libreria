@@ -8,19 +8,15 @@
     padding: 1rem 0;
     justify-items: center;
 }
-
-
 #listaLibros figure{
     width: 10vw;
     height: 10vw;
     overflow: hidden;
     margin-bottom: 1rem;
 }
-
 #listaLibros img{
     width:100%;
 }
-
 #listaLibros a p{
     margin: 1rem;
 }
@@ -35,21 +31,25 @@
     padding: 1rem 0;
     justify-items: center;
 }
-
-
 #listaDiscos figure{
     width: 10vw;
     height: 10vw;
     overflow: hidden;
     margin-bottom: 1rem;
 }
-
 #listaDiscos img{
     width:100%;
 }
-
 #listaDiscos a p{
     margin: 1rem;
+}
+#listaDiscos li, #listaLibros li{
+    justify-content: center;
+    text-align: center;
+}
+
+.main-home .home-bookList #listaLibros, .main-home .home-discList #listaDiscos{
+    grid-column: 1/9;
 }
 
 .listaLibrosTitulo{
@@ -61,14 +61,3 @@
     text-align: center;
 }
 
-#listaDiscos li, #listaLibros li{
-    justify-content: center;
-    text-align: center;
-}
-
-.main-home .home-bookList #listaLibros{
-    grid-column: 1/9;
-}
-.main-home .home-discList #listaDiscos{
-    grid-column: 1/9;
-}
